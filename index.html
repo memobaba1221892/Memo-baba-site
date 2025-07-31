@@ -3,129 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Memo Baba - Minecraft PvP Rehberi</title>
-  <meta name="description" content="Minecraft PvP taktikleri ve en iyi PvP sunucuları Memo Baba tarafından öneriliyor!">
+  <title>Memo Baba'nın PvP Sitesi</title>
   <style>
     body {
-      background-color: #0f0f0f;
-      color: #ffffff;
+      background-image: url('https://i.imgur.com/CqZrj8M.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
       font-family: Arial, sans-serif;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    header {
+      color: white;
       text-align: center;
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      color: #00bfff;
-    }
-    details {
-      background: #1e1e1e;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-    }
-    summary {
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: bold;
-      color: #00ffcc;
-    }
-    p {
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-    .server-list {
-      background-color: #1c1c1c;
-      border-left: 4px solid #00bfff;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-    .server-list h3 {
       margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+    }
+
+    button {
+      background-color: #00ccff;
+      color: black;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #00aacc;
+    }
+
+    #icerik {
+      display: none;
+      margin-top: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
       color: #00ffff;
     }
-    .server-list p {
-      margin: 5px 0;
-    }
+
     a {
       color: #00ffff;
-      text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    #disqus_thread {
+      margin-top: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Memo Baba'nın Minecraft PvP Sitesi</h1>
+    <p>Düğmeye basınca taktikler ve sunucular açılır, en altta yorum yazabilirsin!</p>
 
-  <header>
-    <h1>Memo Baba'nın Minecraft PvP Rehberi</h1>
-    <p>🧠 PvP taktikleri + en iyi sunucu önerileri tek yerde!</p>
-  </header>
+    <button onclick="toggleIcerik()">👊 PvP Taktiklerini Göster</button>
 
-  <!-- 📜 DÜĞMEYLE AÇILAN UZUN YAZI -->
-  <h2>📜 PvP Taktikleri</h2>
-  <details>
-    <summary>🡻 Tıklayarak Uzun PvP Yazısını Aç</summary>
-    <p>
-      Minecraft'ta PvP (Player vs Player), oyuncuların birbirleriyle savaşmasına olanak tanır.  
-      İyi bir PvP oyuncusu olmak için sadece refleks değil, doğru ekipman ve taktik de gerekir.<br><br>
+    <div id="icerik">
+      <h2>🔥 En Etkili PvP Taktikleri</h2>
+      <ul>
+        <li>⚔️ Zıplayarak vur – Kritik hasar verir</li>
+        <li>🛡️ Kalkanı zamanında kullan – Hasarı engeller</li>
+        <li>🍗 Et yemeğini hazır tut – Can hızlı dolsun</li>
+        <li>🌀 Strafing yap – Rakibi şaşırt</li>
+        <li>🧪 Güç/hız iksirleriyle öne geç</li>
+      </ul>
 
-      Zıplayarak saldırmak kritik vuruş sağlar. Kalkanla zamanında savunma yapmak hayat kurtarır.  
-      Strafing (çember çizerek kaçmak), rakibini şaşırtır. Güç ve hız iksirleriyle savaşta avantaj sağlarsın.  
-      Ve tabii ki yemek (et) hızlı ulaşılabilir olmalı!<br><br>
+      <h2>🌐 Minecraft PvP Sunucu Önerileri</h2>
+      <ul>
+        <li><a href="https://hypixel.net" target="_blank">Hypixel</a> – BedWars, SkyWars, Duels</li>
+        <li><a href="https://pvplegends.net" target="_blank">PvPLegends</a> – Kit PvP ve 1v1</li>
+        <li><a href="https://www.minemen.club" target="_blank">Minemen Club</a> – Practice PvP</li>
+        <li><a href="https://badlion.net" target="_blank">Badlion</a> – Mod destekli PvP</li>
+      </ul>
+    </div>
 
-      PvP'de pratik yapmak çok önemlidir. Unutma: Ne kadar çok oynarsan, o kadar iyi olursun! 💥
-    </p>
-  </details>
+    <div id="disqus_thread"></div>
+    <script>
+      function toggleIcerik() {
+        var div = document.getElementById("icerik");
+        if (div.style.display === "none" || div.style.display === "") {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
 
-  <!-- 🗺️ PvP SUNUCU ÖNERİLERİ -->
-  <h2>🌐 En İyi Minecraft PvP Sunucuları</h2>
+      var disqus_config = function () {
+        this.page.url = 'https://memobaba1221892.github.io/Memo-baba-site/';
+        this.page.identifier = 'memo-baba-site';
+      };
 
-  <div class="server-list">
-    <h3>1. Hypixel</h3>
-    <p><strong>IP:</strong> mc.hypixel.net</p>
-    <p>SkyWars, BedWars ve Duels modlarıyla dünyanın en büyük PvP sunucusu.</p>
-    <a href="https://hypixel.net" target="_blank">Siteye git</a>
+      (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://memobaba-site.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Lütfen yorumları görebilmek için JavaScript’i etkinleştir.</noscript>
+
   </div>
-
-  <div class="server-list">
-    <h3>2. PvPLegends</h3>
-    <p><strong>IP:</strong> play.pvplegends.net</p>
-    <p>Kit PvP ve klasik 1v1 savaşlar için kaliteli sunucu.</p>
-    <a href="https://pvplegends.net" target="_blank">Siteye git</a>
-  </div>
-
-  <div class="server-list">
-    <h3>3. Minemen Club</h3>
-    <p><strong>IP:</strong> minemen.club</p>
-    <p>Practice PvP, düşük ping ve lag-free sunucu ortamı.</p>
-    <a href="https://www.minemen.club" target="_blank">Siteye git</a>
-  </div>
-
-  <div class="server-list">
-    <h3>4. Badlion Network</h3>
-    <p><strong>IP:</strong> na.badlion.net</p>
-    <p>Rekabetçi oyuncular için modlu ve güçlü PvP ortamı.</p>
-    <a href="https://www.badlion.net" target="_blank">Siteye git</a>
-  </div>
-
-</body><div id="disqus_thread"></div>
-<script>
-  var disqus_config = function () {
-    this.page.url = 'https://memobaba1221892.github.io/Memo-baba-site/';
-    this.page.identifier = 'memo-baba-site';
-  };
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://memobaba-site.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-<noscript>Lütfen yorumları görebilmek için JavaScript’i etkinleştir.</noscript>
+</body>
 </html>
