@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Memo Baba - Minecraft PvP Sitesi</title>
-  <meta name="description" content="Minecraft PvP taktikleri, sunucu önerileri ve ziyaretçi yorumları Memo Baba'nın sitesinde.">
+  <meta name="description" content="Memo Baba'nın PvP rehberi, sunucu önerileri ve yorum bölümüyle Minecraft dünyası burada!">
   <style>
     body {
       background-color: #0f0f0f;
@@ -17,16 +17,16 @@
     h1, h2 {
       color: #00bfff;
     }
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-      color: #00ffcc;
-    }
     details {
       background: #1c1c1c;
       padding: 15px;
       border-radius: 10px;
       margin-bottom: 30px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #00ffcc;
     }
     .server-list {
       background-color: #1e1e1e;
@@ -37,7 +37,6 @@
     }
     .server-list h3 {
       color: #00ffff;
-      margin-top: 0;
     }
     a {
       color: #00ffff;
@@ -46,78 +45,55 @@
     a:hover {
       text-decoration: underline;
     }
-    /* Yorum kutusu */
-    form {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 40px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #00bfff;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0099cc;
-    }
   </style>
 </head>
 <body>
 
   <h1>Memo Baba'nın Minecraft PvP Sitesi</h1>
-  <p>🧠 PvP taktikleri, sunucular ve ziyaretçiler burada buluşuyor.</p>
+  <p>🧠 PvP taktikleri, sunucular ve yorumlarla dolu tam bir rehber!</p>
 
-  <!-- PvP Taktikleri (düğmeli) -->
   <h2>📜 PvP Taktikleri</h2>
   <details>
     <summary>🡻 Uzun PvP Yazısını Aç</summary>
     <p>
-      Minecraft'ta PvP çok önemli bir beceridir. Kritik vuruşlar için zıplamalı saldır,  
-      kalkanla doğru zamanda savun, strafing yap, iksirleri kullan.  
-      Ne kadar çok pratik yaparsan, o kadar iyi olursun. PvP kralı sen ol! 💥
+      PvP'de kritik vuruş, zıplama saldırıları, strafing ve kalkan zamanlaması çok önemlidir.  
+      Ayrıca iksir, et, kılıç ve ping kontrolü de PvP'nin en önemli parçalarıdır!
     </p>
   </details>
 
-  <!-- PvP Sunucu Listesi -->
-  <h2>🌐 En İyi Minecraft PvP Sunucuları</h2>
+  <h2>🌐 PvP Sunucu Önerileri</h2>
 
   <div class="server-list">
     <h3>1. Hypixel</h3>
     <p><strong>IP:</strong> mc.hypixel.net</p>
-    <p>Dünyanın en popüler PvP sunucusu. SkyWars, BedWars, Duels.</p>
+    <p>BedWars, SkyWars, Duels gibi en iyi PvP modları.</p>
     <a href="https://hypixel.net" target="_blank">Siteye git</a>
   </div>
 
   <div class="server-list">
-    <h3>2. PvPLegends</h3>
-    <p><strong>IP:</strong> play.pvplegends.net</p>
-    <p>Kit PvP ve hızlı savaş isteyenler için birebir.</p>
-    <a href="https://pvplegends.net" target="_blank">Siteye git</a>
+    <h3>2. Minemen Club</h3>
+    <p><strong>IP:</strong> minemen.club</p>
+    <p>Ping dostu PvP arenası, Practice ve 1v1 modları.</p>
+    <a href="https://www.minemen.club" target="_blank">Siteye git</a>
   </div>
 
-  <!-- 💬 Yorum Kutusu -->
-  <h2>💬 Yorum Bırak</h2>
-  <form onsubmit="alert('Yorumun kaydedilmedi ama görsel olarak çalıştı 😊'); return false;">
-    <label for="name">İsmin:</label>
-    <input type="text" id="name" name="name" placeholder="Memo Baba" required>
+  <!-- 💬 Disqus Yorum Bölümü -->
+  <h2>💬 Yorumlar</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://memobaba1221892.github.io/Memo-baba-site/';
+      this.page.identifier = 'memo-baba-site';
+    };
 
-    <label for="comment">Yorumun:</label>
-    <textarea id="comment" name="comment" rows="4" placeholder="Çok güzel site olmuş!" required></textarea>
-
-    <button type="submit">Gönder</button>
-  </form>
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://memobaba-site.disqus.com/embed.js';  // Bu kısım senin site adın
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Lütfen yorumları görebilmek için JavaScript'i etkinleştir.</noscript>
 
 </body>
 </html>
