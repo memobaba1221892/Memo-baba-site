@@ -3,53 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Memo Baba - Minecraft PvP Rehberi</title>
-  <meta name="description" content="Minecraft PvP taktikleri ve en iyi PvP sunucuları Memo Baba tarafından öneriliyor!">
+  <title>Memo Baba - Minecraft PvP Sitesi</title>
+  <meta name="description" content="Minecraft PvP taktikleri, sunucu önerileri ve ziyaretçi yorumları Memo Baba'nın sitesinde.">
   <style>
     body {
       background-color: #0f0f0f;
-      color: #ffffff;
+      color: #fff;
       font-family: Arial, sans-serif;
       padding: 20px;
       max-width: 900px;
       margin: auto;
     }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
     h1, h2 {
       color: #00bfff;
     }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #00ffcc;
+    }
     details {
-      background: #1e1e1e;
+      background: #1c1c1c;
       padding: 15px;
       border-radius: 10px;
       margin-bottom: 30px;
     }
-    summary {
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: bold;
-      color: #00ffcc;
-    }
-    p {
-      margin-top: 10px;
-      line-height: 1.6;
-    }
     .server-list {
-      background-color: #1c1c1c;
+      background-color: #1e1e1e;
       border-left: 4px solid #00bfff;
       padding: 15px;
       margin-bottom: 20px;
       border-radius: 8px;
     }
     .server-list h3 {
-      margin: 0;
       color: #00ffff;
-    }
-    .server-list p {
-      margin: 5px 0;
+      margin-top: 0;
     }
     a {
       color: #00ffff;
@@ -58,61 +46,78 @@
     a:hover {
       text-decoration: underline;
     }
+    /* Yorum kutusu */
+    form {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #00bfff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0099cc;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Memo Baba'nın Minecraft PvP Rehberi</h1>
-    <p>🧠 PvP taktikleri + en iyi sunucu önerileri tek yerde!</p>
-  </header>
+  <h1>Memo Baba'nın Minecraft PvP Sitesi</h1>
+  <p>🧠 PvP taktikleri, sunucular ve ziyaretçiler burada buluşuyor.</p>
 
-  <!-- 📜 DÜĞMEYLE AÇILAN UZUN YAZI -->
+  <!-- PvP Taktikleri (düğmeli) -->
   <h2>📜 PvP Taktikleri</h2>
   <details>
-    <summary>🡻 Tıklayarak Uzun PvP Yazısını Aç</summary>
+    <summary>🡻 Uzun PvP Yazısını Aç</summary>
     <p>
-      Minecraft'ta PvP (Player vs Player), oyuncuların birbirleriyle savaşmasına olanak tanır.  
-      İyi bir PvP oyuncusu olmak için sadece refleks değil, doğru ekipman ve taktik de gerekir.<br><br>
-
-      Zıplayarak saldırmak kritik vuruş sağlar. Kalkanla zamanında savunma yapmak hayat kurtarır.  
-      Strafing (çember çizerek kaçmak), rakibini şaşırtır. Güç ve hız iksirleriyle savaşta avantaj sağlarsın.  
-      Ve tabii ki yemek (et) hızlı ulaşılabilir olmalı!<br><br>
-
-      PvP'de pratik yapmak çok önemlidir. Unutma: Ne kadar çok oynarsan, o kadar iyi olursun! 💥
+      Minecraft'ta PvP çok önemli bir beceridir. Kritik vuruşlar için zıplamalı saldır,  
+      kalkanla doğru zamanda savun, strafing yap, iksirleri kullan.  
+      Ne kadar çok pratik yaparsan, o kadar iyi olursun. PvP kralı sen ol! 💥
     </p>
   </details>
 
-  <!-- 🗺️ PvP SUNUCU ÖNERİLERİ -->
+  <!-- PvP Sunucu Listesi -->
   <h2>🌐 En İyi Minecraft PvP Sunucuları</h2>
 
   <div class="server-list">
     <h3>1. Hypixel</h3>
     <p><strong>IP:</strong> mc.hypixel.net</p>
-    <p>SkyWars, BedWars ve Duels modlarıyla dünyanın en büyük PvP sunucusu.</p>
+    <p>Dünyanın en popüler PvP sunucusu. SkyWars, BedWars, Duels.</p>
     <a href="https://hypixel.net" target="_blank">Siteye git</a>
   </div>
 
   <div class="server-list">
     <h3>2. PvPLegends</h3>
     <p><strong>IP:</strong> play.pvplegends.net</p>
-    <p>Kit PvP ve klasik 1v1 savaşlar için kaliteli sunucu.</p>
+    <p>Kit PvP ve hızlı savaş isteyenler için birebir.</p>
     <a href="https://pvplegends.net" target="_blank">Siteye git</a>
   </div>
 
-  <div class="server-list">
-    <h3>3. Minemen Club</h3>
-    <p><strong>IP:</strong> minemen.club</p>
-    <p>Practice PvP, düşük ping ve lag-free sunucu ortamı.</p>
-    <a href="https://www.minemen.club" target="_blank">Siteye git</a>
-  </div>
+  <!-- 💬 Yorum Kutusu -->
+  <h2>💬 Yorum Bırak</h2>
+  <form onsubmit="alert('Yorumun kaydedilmedi ama görsel olarak çalıştı 😊'); return false;">
+    <label for="name">İsmin:</label>
+    <input type="text" id="name" name="name" placeholder="Memo Baba" required>
 
-  <div class="server-list">
-    <h3>4. Badlion Network</h3>
-    <p><strong>IP:</strong> na.badlion.net</p>
-    <p>Rekabetçi oyuncular için modlu ve güçlü PvP ortamı.</p>
-    <a href="https://www.badlion.net" target="_blank">Siteye git</a>
-  </div>
+    <label for="comment">Yorumun:</label>
+    <textarea id="comment" name="comment" rows="4" placeholder="Çok güzel site olmuş!" required></textarea>
+
+    <button type="submit">Gönder</button>
+  </form>
 
 </body>
 </html>
